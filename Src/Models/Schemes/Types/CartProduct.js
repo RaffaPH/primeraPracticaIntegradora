@@ -1,11 +1,16 @@
-import stringRequired from "./StringRequired.js";
+import { Schema } from 'mongoose'
 
 const cartProduct = {
+    productID: {
+        type: Schema.Types.ObjectId,
+        //FIXME: quitar magic string
+        ref: "products",
+        required: true
+    },
     quantity: {
         type: Number,
         default: 0
-    },
-    productID: stringRequired
+    }
 }
 
 export default cartProduct;

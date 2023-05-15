@@ -1,7 +1,15 @@
-
 const stringRequired = {
     type: String,
     required: true
 }
 
-export default stringRequired;
+const stringRequiredAsIndex = {
+    type: String,
+    required: true,
+    index: true
+}
+
+export {
+    stringRequired as default,
+    stringRequiredAsIndex
+}
